@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersécurité | Vladimir Zombré</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <header class="navbar scrolled" id="navbar">
+    <a href="index.html" class="logo">&lt;VZ<span>/&gt;</span></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu">☰</button>
+    <nav id="menu">
+      <a href="index.html">Accueil</a>
+      <a href="cybersecurite.html" style="color:var(--accent)">Cybersécurité</a>
+      <a href="analyse-systeme.html">Analyse système</a>
+      <a href="index.html#contact" class="btn-nav">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <a href="index.html" class="back">← Retour</a>
+    <h1>🛡️ <span class="accent">Cybersécurité</span></h1>
+    <p>Ma démarche d'apprentissage : comprendre comment les systèmes sont attaqués pour mieux les défendre.</p>
+  </div>
+
+  <main>
+    <section class="section reveal">
+      <h3 class="title"><span>01.</span> Les fondamentaux</h3>
+      <div class="cards">
+        <article class="card"><span class="icon">🔐</span><h4>Triade CIA</h4><p>Confidentialité, Intégrité, Disponibilité : les 3 piliers de la sécurité de l'information.</p></article>
+        <article class="card"><span class="icon">🎣</span><h4>Phishing</h4><p>Reconnaître les faux messages et liens piégés, première cause de piratage.</p></article>
+        <article class="card"><span class="icon">🦠</span><h4>Malwares</h4><p>Virus, vers, ransomwares, chevaux de Troie : comprendre leur fonctionnement.</p></article>
+        <article class="card"><span class="icon">🔑</span><h4>Mots de passe & MFA</h4><p>Gestionnaire de mots de passe, authentification à deux facteurs.</p></article>
+        <article class="card"><span class="icon">🧱</span><h4>Pare-feu & réseaux</h4><p>Filtrage des flux, segmentation, VPN et sécurisation du Wi-Fi.</p></article>
+        <article class="card"><span class="icon">🐧</span><h4>Linux</h4><p>Ligne de commande, permissions, gestion des utilisateurs et des services.</p></article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h3 class="title"><span>02.</span> Parcours d'apprentissage</h3>
+      <div class="timeline">
+        <div class="item"><h4>Réseaux de base</h4><p>Modèle OSI, TCP/IP, adressage IP, DNS, DHCP. <b class="accent">En cours</b></p></div>
+        <div class="item"><h4>Systèmes Linux & Windows</h4><p>Administration de base et sécurité des comptes. <b class="accent">En cours</b></p></div>
+        <div class="item"><h4>Outils d'analyse</h4><p>Wireshark, Nmap (sur mon propre laboratoire uniquement). <b>À venir</b></p></div>
+        <div class="item"><h4>Certifications visées</h4><p>Cisco CCNA, CompTIA Security+ puis master en cybersécurité. <b>Objectif</b></p></div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h3 class="title"><span>03.</span> Bonnes pratiques</h3>
+      <div class="code">
+$ checklist_securite<br>
+[x] Mettre à jour système et logiciels<br>
+[x] Activer l'authentification à deux facteurs<br>
+[x] Utiliser des mots de passe uniques et longs<br>
+[x] Sauvegarder ses données régulièrement<br>
+[ ] Apprendre à analyser des journaux (logs)
+      </div>
+      <p class="warn">⚠️ J'applique l'éthique : mes tests se font uniquement sur mes propres machines ou dans des environnements d'entraînement autorisés.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Vladimir Zombré — IST/UBS Ouaga 2000</p>
+    <a href="https://www.linkedin.com/in/vladimir-zombr%C3%A9-b601b2440" target="_blank" rel="noopener">LinkedIn</a>
+  </footer>
+  <button id="toTop" aria-label="Retour en haut">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

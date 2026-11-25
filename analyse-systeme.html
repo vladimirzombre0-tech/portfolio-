@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse système | Vladimir Zombré</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <header class="navbar scrolled" id="navbar">
+    <a href="index.html" class="logo">&lt;VZ<span>/&gt;</span></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu">☰</button>
+    <nav id="menu">
+      <a href="index.html">Accueil</a>
+      <a href="cybersecurite.html">Cybersécurité</a>
+      <a href="analyse-systeme.html" style="color:var(--accent)">Analyse système</a>
+      <a href="index.html#contact" class="btn-nav">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <a href="index.html" class="back">← Retour</a>
+    <h1>🖧 <span class="accent">Analyse système</span></h1>
+    <p>Comprendre, diagnostiquer et améliorer le fonctionnement d'un système informatique.</p>
+  </div>
+
+  <main>
+    <section class="section reveal">
+      <h3 class="title"><span>01.</span> Méthodologie</h3>
+      <div class="timeline">
+        <div class="item"><h4>1. Recueil des besoins</h4><p>Identifier les utilisateurs, les objectifs et les contraintes.</p></div>
+        <div class="item"><h4>2. Étude de l'existant</h4><p>Cartographier le matériel, les logiciels et le réseau en place.</p></div>
+        <div class="item"><h4>3. Diagnostic</h4><p>Repérer les pannes, lenteurs et failles de sécurité.</p></div>
+        <div class="item"><h4>4. Solutions & recommandations</h4><p>Proposer des améliorations chiffrées et priorisées.</p></div>
+        <div class="item"><h4>5. Suivi & supervision</h4><p>Mesurer les résultats et surveiller dans le temps.</p></div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h3 class="title"><span>02.</span> Outils & commandes</h3>
+      <div class="cards">
+        <article class="card"><span class="icon">📡</span><h4>Réseau</h4><p>Tester la connectivité et le chemin des paquets.</p><div class="chips"><span>ping</span><span>tracert</span><span>ipconfig</span><span>nslookup</span></div></article>
+        <article class="card"><span class="icon">⚙️</span><h4>Système</h4><p>Surveiller processus, mémoire et disque.</p><div class="chips"><span>top</span><span>df -h</span><span>free -m</span><span>Gestionnaire des tâches</span></div></article>
+        <article class="card"><span class="icon">📊</span><h4>Supervision</h4><p>Observer l'état des machines en continu.</p><div class="chips"><span>Zabbix</span><span>Nagios</span><span>Wireshark</span></div></article>
+      </div>
+      <div class="code">
+$ ping -c 4 8.8.8.8<br>
+$ df -h<br>
+$ ip a
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h3 class="title"><span>03.</span> Mes compétences en analyse</h3>
+      <div class="skills">
+        <div class="skill" data-level="60"><p>Diagnostic réseau<em>60%</em></p><div class="bar"><div></div></div></div>
+        <div class="skill" data-level="50"><p>Lecture de journaux (logs)<em>50%</em></p><div class="bar"><div></div></div></div>
+        <div class="skill" data-level="55"><p>Schémas & documentation (UML, Merise)<em>55%</em></p><div class="bar"><div></div></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Vladimir Zombré — IST/UBS Ouaga 2000</p>
+    <a href="https://www.linkedin.com/in/vladimir-zombr%C3%A9-b601b2440" target="_blank" rel="noopener">LinkedIn</a>
+  </footer>
+  <button id="toTop" aria-label="Retour en haut">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

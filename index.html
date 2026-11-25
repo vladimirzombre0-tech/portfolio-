@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Vladimir Zombré, étudiant en Réseaux et Systèmes informatiques à l'IST/UBS Ouaga 2000.">
+  <title>Vladimir Zombré | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="logo">&lt;VZ<span>/&gt;</span></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu">☰</button>
+    <nav id="menu">
+      <a href="#apropos">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="cybersecurite.html">Cybersécurité</a>
+      <a href="analyse-systeme.html">Analyse système</a>
+      <a href="#contact" class="btn-nav">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="accueil">
+      <div class="hero-text">
+        <p class="tag">// Bienvenue sur mon portfolio</p>
+        <h1>Je suis <span class="accent">Vladimir Zombré</span></h1>
+        <h2>Étudiant en <span id="typing" class="accent"></span><span class="cursor">|</span></h2>
+        <p class="lead">
+          Étudiant en 1ʳᵉ année de Réseaux et Systèmes informatiques à l'IST/UBS Ouaga 2000.
+          Passionné par les réseaux, l'analyse des systèmes et la cybersécurité.
+        </p>
+        <div class="hero-btns">
+          <a href="#projets" class="btn">Voir mes projets</a>
+          <a href="https://www.linkedin.com/in/vladimir-zombr%C3%A9-b601b2440" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+        </div>
+      </div>
+      <div class="terminal">
+        <div class="terminal-bar"><i></i><i></i><i></i><span>vladimir@ist:~</span></div>
+        <pre id="term"></pre>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section class="section reveal" id="apropos">
+      <h3 class="title"><span>01.</span> À propos</h3>
+      <div class="about">
+        <div>
+          <p>
+            Je m'appelle Vladimir, je suis étudiant à l'IST/UBS Ouaga 2000 en Réseaux et
+            Systèmes informatiques. J'apprends les bases solides de l'informatique : réseaux,
+            systèmes, programmation et sécurité.
+          </p>
+          <p>
+            Mon objectif : devenir un expert en cybersécurité et poursuivre mes études
+            jusqu'au master. J'apprends aussi à coder et à construire mes propres projets.
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat"><b data-count="1">0</b><small>Année d'études</small></div>
+          <div class="stat"><b data-count="5">0</b><small>Technologies explorées</small></div>
+          <div class="stat"><b data-count="3">0</b><small>Projets en cours</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section class="section reveal" id="competences">
+      <h3 class="title"><span>02.</span> Compétences</h3>
+      <div class="skills">
+        <div class="skill" data-level="70"><p>Réseaux (TCP/IP, adressage)<em>70%</em></p><div class="bar"><div></div></div></div>
+        <div class="skill" data-level="60"><p>Systèmes (Windows / Linux)<em>60%</em></p><div class="bar"><div></div></div></div>
+        <div class="skill" data-level="45"><p>Cybersécurité (bases)<em>45%</em></p><div class="bar"><div></div></div></div>
+        <div class="skill" data-level="55"><p>HTML / CSS / JavaScript<em>55%</em></p><div class="bar"><div></div></div></div>
+        <div class="skill" data-level="65"><p>Bureautique (Word, Excel, PowerPoint)<em>65%</em></p><div class="bar"><div></div></div></div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section class="section reveal" id="projets">
+      <h3 class="title"><span>03.</span> Projets</h3>
+      <div class="cards">
+        <article class="card">
+          <span class="icon">🌐</span>
+          <h4>Portfolio personnel</h4>
+          <p>Site vitrine en HTML, CSS et JavaScript avec thème vert sombre et animations.</p>
+          <div class="chips"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        </article>
+        <article class="card">
+          <span class="icon">🛡️</span>
+          <h4>Veille cybersécurité</h4>
+          <p>Notes et fiches sur les menaces courantes et les bonnes pratiques de défense.</p>
+          <a href="cybersecurite.html" class="more">Voir la page →</a>
+        </article>
+        <article class="card">
+          <span class="icon">🖧</span>
+          <h4>Analyse de systèmes</h4>
+          <p>Méthodes d'analyse d'un système : audit, diagnostic et supervision.</p>
+          <a href="analyse-systeme.html" class="more">Voir la page →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section reveal" id="contact">
+      <h3 class="title"><span>04.</span> Contact</h3>
+      <form class="form" id="contactForm">
+        <input type="text" id="nom" placeholder="Votre nom" required>
+        <input type="email" id="email" placeholder="Votre email" required>
+        <textarea id="message" rows="5" placeholder="Votre message" required></textarea>
+        <button class="btn" type="submit">Envoyer</button>
+        <p id="formMsg" class="form-msg"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Vladimir Zombré — IST/UBS Ouaga 2000</p>
+    <a href="https://www.linkedin.com/in/vladimir-zombr%C3%A9-b601b2440" target="_blank" rel="noopener">LinkedIn</a>
+  </footer>
+
+  <button id="toTop" aria-label="Retour en haut">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

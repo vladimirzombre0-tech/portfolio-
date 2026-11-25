@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réseaux informatiques | Vladimir Zombré</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <header class="navbar scrolled" id="navbar">
+    <a href="index.html" class="logo">&lt;VZ<span>/&gt;</span></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu">☰</button>
+    <nav id="menu">
+      <a href="index.html">Accueil</a>
+      <a href="reseaux-informatique.html" style="color:var(--accent)">Réseaux</a>
+      <a href="cybersecurite.html">Cybersécurité</a>
+      <a href="analyse-systeme.html">Analyse système</a>
+      <a href="index.html#contact" class="btn-nav">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <a href="index.html" class="back">← Retour</a>
+    <h1>🌐 <span class="accent">Réseaux informatiques</span></h1>
+    <p>Comprendre comment les machines communiquent entre elles : du câble jusqu'à l'application.</p>
+  </div>
+
+  <main>
+    <section class="section reveal">
+      <h3 class="title"><span>01.</span> Le modèle OSI</h3>
+      <div class="timeline">
+        <div class="item"><h4>7. Application</h4><p>Interface avec l'utilisateur : HTTP, DNS, SMTP, FTP.</p></div>
+        <div class="item"><h4>6. Présentation</h4><p>Format des données, chiffrement, compression.</p></div>
+        <div class="item"><h4>5. Session</h4><p>Ouverture, maintien et fermeture des échanges.</p></div>
+        <div class="item"><h4>4. Transport</h4><p>Acheminement fiable ou rapide : TCP et UDP, ports.</p></div>
+        <div class="item"><h4>3. Réseau</h4><p>Adressage et routage : IP, routeurs.</p></div>
+        <div class="item"><h4>2. Liaison de données</h4><p>Adresses MAC, trames, switchs.</p></div>
+        <div class="item"><h4>1. Physique</h4><p>Câbles, ondes Wi-Fi, signaux électriques.</p></div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h3 class="title"><span>02.</span> Équipements réseau</h3>
+      <div class="cards">
+        <article class="card"><span class="icon">🔀</span><h4>Switch</h4><p>Relie les machines d'un même réseau local grâce aux adresses MAC.</p></article>
+        <article class="card"><span class="icon">📶</span><h4>Routeur</h4><p>Relie des réseaux différents et choisit le meilleur chemin pour les paquets.</p></article>
+        <article class="card"><span class="icon">🧱</span><h4>Pare-feu</h4><p>Filtre le trafic entrant et sortant selon des règles de sécurité.</p></article>
+        <article class="card"><span class="icon">📡</span><h4>Point d'accès Wi-Fi</h4><p>Fournit l'accès sans fil au réseau local.</p></article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h3 class="title"><span>03.</span> Protocoles et ports courants</h3>
+      <div class="cards">
+        <article class="card"><h4>Web</h4><div class="chips"><span>HTTP 80</span><span>HTTPS 443</span></div></article>
+        <article class="card"><h4>Administration</h4><div class="chips"><span>SSH 22</span><span>Telnet 23</span></div></article>
+        <article class="card"><h4>Messagerie</h4><div class="chips"><span>SMTP 25</span><span>IMAP 143</span></div></article>
+        <article class="card"><h4>Services réseau</h4><div class="chips"><span>DNS 53</span><span>DHCP 67/68</span><span>FTP 21</span></div></article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h3 class="title"><span>04.</span> Adressage IP et sous-réseaux</h3>
+      <p style="color:var(--muted);max-width:640px">
+        Une adresse IPv4 est composée de 32 bits. Le masque de sous-réseau indique quelle partie
+        identifie le réseau et quelle partie identifie la machine.
+      </p>
+      <div class="code">
+Réseau       : 192.168.1.0/24<br>
+Masque       : 255.255.255.0<br>
+Hôtes utiles : 254 (de .1 à .254)<br>
+Broadcast    : 192.168.1.255<br><br>
+Découpage en /26 (masque 255.255.255.192) :<br>
+192.168.1.0/26 &nbsp; 192.168.1.64/26<br>
+192.168.1.128/26 &nbsp; 192.168.1.192/26<br>
+=&gt; 4 sous-réseaux de 62 hôtes chacun
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h3 class="title"><span>05.</span> Commandes de diagnostic</h3>
+      <div class="code">
+$ ipconfig /all &nbsp;&nbsp;&nbsp;# Windows : configuration IP<br>
+$ ip a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Linux : interfaces réseau<br>
+$ ping 8.8.8.8 &nbsp;&nbsp;&nbsp;&nbsp;# tester la connectivité<br>
+$ tracert google.com &nbsp;# Windows : chemin des paquets<br>
+$ traceroute google.com # Linux : chemin des paquets<br>
+$ nslookup google.com &nbsp;# résolution DNS
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h3 class="title"><span>06.</span> Objectifs d'apprentissage</h3>
+      <div class="skills">
+        <div class="skill" data-level="75"><p>Modèle OSI / TCP-IP<em>75%</em></p><div class="bar"><div></div></div></div>
+        <div class="skill" data-level="60"><p>Adressage IP et sous-réseaux<em>60%</em></p><div class="bar"><div></div></div></div>
+        <div class="skill" data-level="40"><p>Routage et commutation (Cisco)<em>40%</em></p><div class="bar"><div></div></div></div>
+        <div class="skill" data-level="35"><p>Simulation avec Packet Tracer<em>35%</em></p><div class="bar"><div></div></div></div>
+      </div>
+      <p class="warn">🎯 Objectif : passer la certification Cisco CCNA.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Vladimir Zombré — IST/UBS Ouaga 2000</p>
+    <a href="https://www.linkedin.com/in/vladimir-zombr%C3%A9-b601b2440" target="_blank" rel="noopener">LinkedIn</a>
+  </footer>
+  <button id="toTop" aria-label="Retour en haut">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
